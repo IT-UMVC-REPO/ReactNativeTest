@@ -36,11 +36,11 @@ export const spacing = {
 
 export const components = {
     tabBar: {
-        height: spacing[16],
-        horizontalInset: spacing[5],
-        radius: spacing[7],
-        iconFrame: spacing[11],
-        itemPaddingVertical: 0,
+        height: 56,
+        horizontalInset: 12,
+        radius: 18,
+        iconFrame: 22,
+        itemPaddingVertical: 4,
     },
 } as const;
 

@@ -19,7 +19,11 @@ const TabIcon = ({ focused, icon }: TabIconProps) => (
                 source={icon}
                 resizeMode="contain"
                 className={clsx(focused ? "opacity-100" : "opacity-60")}
-                style={{ height: 20, width: 20 }}
+                style={{
+                    height: 20,
+                    width: 20,
+                    tintColor: focused ? colors.background : colors.foreground,
+                }}
             />
         </View>
     </View>
