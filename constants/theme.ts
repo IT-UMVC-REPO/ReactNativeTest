@@ -39,8 +39,8 @@ export const components = {
         height: 56,
         horizontalInset: 12,
         radius: 18,
-        iconFrame: 22,
-        itemPaddingVertical: 4,
+        iconFrame: spacing[11],
+        itemPaddingVertical: spacing[0],
     },
 } as const;
 

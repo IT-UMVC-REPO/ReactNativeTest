@@ -7,7 +7,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const TabBar = components.tabBar;
 
-const TabIcon = ({ focused, icon }: TabIconProps) => (
+const TabIcon = ({ color, focused, icon }: TabIconProps) => (
     <View className="size-11 items-center justify-center">
         <View
             className={clsx(
@@ -22,7 +22,7 @@ const TabIcon = ({ focused, icon }: TabIconProps) => (
                 style={{
                     height: 20,
                     width: 20,
-                    tintColor: focused ? colors.background : colors.foreground,
+                    tintColor: color,
                 }}
             />
         </View>
@@ -37,6 +37,8 @@ const tabLayout = () => {
             screenOptions={{
                 headerShown: false,
                 tabBarShowLabel: false,
+                tabBarActiveTintColor: colors.background,
+                tabBarInactiveTintColor: colors.background,
                 tabBarStyle: {
                     position: "absolute",
                     bottom: Math.max(insets.bottom, TabBar.horizontalInset),
@@ -65,7 +67,9 @@ const tabLayout = () => {
                     name={tab.name}
                     options={{
                         title: tab.title,
-                        tabBarIcon: ({ focused }) => <TabIcon focused={focused} icon={tab.icon} />,
+                        tabBarIcon: ({ color, focused }) => (
+                            <TabIcon color={color} focused={focused} icon={tab.icon} />
+                        ),
                     }}
                 />
             ))}

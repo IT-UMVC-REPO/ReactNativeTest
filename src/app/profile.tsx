@@ -7,7 +7,7 @@ const SafeAreaView = styled(RNSafeAreaView)
 const profile = () => {
     return (
         <SafeAreaView className="flex-1 items-center justify-center bg-blue-100 p-5">
-            <Text>profile</Text>
+            <Text>Profile</Text>
         </SafeAreaView>
     )
 }

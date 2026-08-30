@@ -1,4 +1,4 @@
-import type { ImageSourcePropType } from "react-native";
+import type { ColorValue, ImageSourcePropType } from "react-native";
 
 declare global {
     interface AppTab {
@@ -8,6 +8,7 @@ declare global {
     }
 
     interface TabIconProps {
+        color: ColorValue;
         focused: boolean;
         icon: ImageSourcePropType;
     }
